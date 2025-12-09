@@ -30,7 +30,9 @@ jobs:
         run: |
           # Remove old files except .git and workflows
           find . -maxdepth 1 ! -name '.git' ! -name '.github' ! -name '.' -exec rm -rf {} +
-          # Copy new build
+          # Copy public assets first
+          cp -r /tmp/fossiq/packages/ui/public/* .
+          # Copy dist files (overwrites public/index.html with built version)
           cp -r /tmp/fossiq/packages/ui/dist/* .
           # Ensure .nojekyll exists
           touch .nojekyll
