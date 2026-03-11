@@ -1,6 +1,6 @@
 // Service Worker for Fossiq PWA
 // Version is updated during build process
-const VERSION = "1773217591209";
+const VERSION = "1773218710862";
 const CACHE_NAME = `fossiq-v${VERSION}`;
 
 // DuckDB binaries: large, essentially immutable — cache-first
